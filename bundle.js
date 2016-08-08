@@ -6,6 +6,7 @@ function forEach(r,t,o){if(!isFunction(t))throw new TypeError("iterator must be 
 },{"is-function":24}],3:[function(require,module,exports){
 (function (global){
 "undefined"!=typeof window?module.exports=window:"undefined"!=typeof global?module.exports=global:"undefined"!=typeof self?module.exports=self:module.exports={};
+
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{}],4:[function(require,module,exports){
 "use strict";function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}function _interopRequireWildcard(e){if(e&&e.__esModule)return e;var r={};if(null!=e)for(var a in e)Object.prototype.hasOwnProperty.call(e,a)&&(r[a]=e[a]);return r.default=e,r}function create(){var e=new base.HandlebarsEnvironment;return Utils.extend(e,base),e.SafeString=_handlebarsSafeString2.default,e.Exception=_handlebarsException2.default,e.Utils=Utils,e.escapeExpression=Utils.escapeExpression,e.VM=runtime,e.template=function(r){return runtime.template(r,e)},e}exports.__esModule=!0;var _handlebarsBase=require("./handlebars/base"),base=_interopRequireWildcard(_handlebarsBase),_handlebarsSafeString=require("./handlebars/safe-string"),_handlebarsSafeString2=_interopRequireDefault(_handlebarsSafeString),_handlebarsException=require("./handlebars/exception"),_handlebarsException2=_interopRequireDefault(_handlebarsException),_handlebarsUtils=require("./handlebars/utils"),Utils=_interopRequireWildcard(_handlebarsUtils),_handlebarsRuntime=require("./handlebars/runtime"),runtime=_interopRequireWildcard(_handlebarsRuntime),_handlebarsNoConflict=require("./handlebars/no-conflict"),_handlebarsNoConflict2=_interopRequireDefault(_handlebarsNoConflict),inst=create();inst.create=create,_handlebarsNoConflict2.default(inst),inst.default=inst,exports.default=inst,module.exports=exports.default;
@@ -67,9 +68,9 @@ function forEach(r,t,o){if(!isFunction(t))throw new TypeError("iterator must be 
 module.exports=require("./dist/cjs/handlebars.runtime").default;
 },{"./dist/cjs/handlebars.runtime":4}],23:[function(require,module,exports){
 module.exports=require("handlebars/runtime").default;
-
 },{"handlebars/runtime":22}],24:[function(require,module,exports){
 function isFunction(o){var t=toString.call(o);return"[object Function]"===t||"function"==typeof o&&"[object RegExp]"!==t||"undefined"!=typeof window&&(o===window.setTimeout||o===window.alert||o===window.confirm||o===window.prompt)}module.exports=isFunction;var toString=Object.prototype.toString;
+
 },{}],25:[function(require,module,exports){
 var trim=require("trim"),forEach=require("for-each"),isArray=function(r){return"[object Array]"===Object.prototype.toString.call(r)};module.exports=function(r){if(!r)return{};var e={};return forEach(trim(r).split("\n"),function(r){var t=r.indexOf(":"),i=trim(r.slice(0,t)).toLowerCase(),o=trim(r.slice(t+1));"undefined"==typeof e[i]?e[i]=o:isArray(e[i])?e[i].push(o):e[i]=[e[i],o]}),e};
 },{"for-each":2,"trim":26}],26:[function(require,module,exports){
