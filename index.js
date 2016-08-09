@@ -17,9 +17,8 @@ function refresh (){
     var target = document.getElementsByTagName('main')[0]
     target.innerHTML = greeting({name: 'James', issData: issData})
   })
-  document.getElementById('refresh_button')
-    .addEventListener('click', refresh)
 }
 
+refresh()
 
-//document.getElementById('refresh_button').addEventListener('click', refresh)
+document.getElementById('refresh_button').addEventListener('click', refresh)
