@@ -16,9 +16,8 @@ var issData = JSON.parse(data.body)
   target.innerHTML = greeting({name: 'James', issData: issData.velocity})
 })
 
-
-
-
-module.exports = {
-  hello: hello
+function refresh (){
+  return window.location.reload()
 }
+
+document.getElementById('refresh_button').addEventListener('click', refresh)
