@@ -6,7 +6,6 @@ function forEach(r,t,o){if(!isFunction(t))throw new TypeError("iterator must be 
 },{"is-function":24}],3:[function(require,module,exports){
 (function (global){
 "undefined"!=typeof window?module.exports=window:"undefined"!=typeof global?module.exports=global:"undefined"!=typeof self?module.exports=self:module.exports={};
-
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{}],4:[function(require,module,exports){
 "use strict";function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}function _interopRequireWildcard(e){if(e&&e.__esModule)return e;var r={};if(null!=e)for(var a in e)Object.prototype.hasOwnProperty.call(e,a)&&(r[a]=e[a]);return r.default=e,r}function create(){var e=new base.HandlebarsEnvironment;return Utils.extend(e,base),e.SafeString=_handlebarsSafeString2.default,e.Exception=_handlebarsException2.default,e.Utils=Utils,e.escapeExpression=Utils.escapeExpression,e.VM=runtime,e.template=function(r){return runtime.template(r,e)},e}exports.__esModule=!0;var _handlebarsBase=require("./handlebars/base"),base=_interopRequireWildcard(_handlebarsBase),_handlebarsSafeString=require("./handlebars/safe-string"),_handlebarsSafeString2=_interopRequireDefault(_handlebarsSafeString),_handlebarsException=require("./handlebars/exception"),_handlebarsException2=_interopRequireDefault(_handlebarsException),_handlebarsUtils=require("./handlebars/utils"),Utils=_interopRequireWildcard(_handlebarsUtils),_handlebarsRuntime=require("./handlebars/runtime"),runtime=_interopRequireWildcard(_handlebarsRuntime),_handlebarsNoConflict=require("./handlebars/no-conflict"),_handlebarsNoConflict2=_interopRequireDefault(_handlebarsNoConflict),inst=create();inst.create=create,_handlebarsNoConflict2.default(inst),inst.default=inst,exports.default=inst,module.exports=exports.default;
@@ -66,6 +65,7 @@ function forEach(r,t,o){if(!isFunction(t))throw new TypeError("iterator must be 
 
 },{}],22:[function(require,module,exports){
 module.exports=require("./dist/cjs/handlebars.runtime").default;
+
 },{"./dist/cjs/handlebars.runtime":4}],23:[function(require,module,exports){
 module.exports=require("handlebars/runtime").default;
 },{"handlebars/runtime":22}],24:[function(require,module,exports){
@@ -80,5 +80,5 @@ function trim(r){return r.replace(/^\s*|\s*$/g,"")}exports=module.exports=trim,e
 },{"global/window":3,"is-function":24,"parse-headers":25,"xtend":28}],28:[function(require,module,exports){
 function extend(){for(var r={},e=0;e<arguments.length;e++){var t=arguments[e];for(var n in t)hasOwnProperty.call(t,n)&&(r[n]=t[n])}return r}module.exports=extend;var hasOwnProperty=Object.prototype.hasOwnProperty;
 },{}],29:[function(require,module,exports){
-var HandlebarsCompiler=require("hbsfy/runtime");module.exports=HandlebarsCompiler.template({compiler:[7,">= 4.0.0"],main:function(n,e,l,a,t){var u,i,r=n.escapeExpression,s=n.lambda;return"<h1>Hello "+r((i=null!=(i=l.name||(null!=e?e.name:e))?i:l.helperMissing,"function"==typeof i?i.call(null!=e?e:{},{name:"name",hash:{},data:t}):i))+"!</h1>\n<img src='../nz_from_iss.png'/>\n<p>Latitude:"+r(s(null!=(u=null!=e?e.issData:e)?u.latitude:u,e))+"</p>\n<P>Longitude:"+r(s(null!=(u=null!=e?e.issData:e)?u.longitude:u,e))+"</p>\n\n<button id='refresh_button'>REFRESH</button>\n"},useData:!0});
+var HandlebarsCompiler=require("hbsfy/runtime");module.exports=HandlebarsCompiler.template({compiler:[7,">= 4.0.0"],main:function(n,e,l,a,t){var u,i,r=n.escapeExpression,s=n.lambda;return"<h1>Hello "+r((i=null!=(i=l.name||(null!=e?e.name:e))?i:l.helperMissing,"function"==typeof i?i.call(null!=e?e:{},{name:"name",hash:{},data:t}):i))+"!</h1>\n<img src='../../nz_from_iss.png'/>\n<p>Latitude:"+r(s(null!=(u=null!=e?e.issData:e)?u.latitude:u,e))+"</p>\n<P>Longitude:"+r(s(null!=(u=null!=e?e.issData:e)?u.longitude:u,e))+"</p>\n\n<button id='refresh_button'>REFRESH</button>\n"},useData:!0});
 },{"hbsfy/runtime":23}]},{},[1]);
