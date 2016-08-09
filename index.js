@@ -4,7 +4,6 @@ var greeting = require('./views/greeting.hbs')
 var endpoint = 'https://api.wheretheiss.at/v1/satellites/25544'
 
 
-
 function refresh (){
   xhr.get(endpoint, function (err, data) {
     if (err) {
@@ -19,5 +18,7 @@ function refresh (){
     target.innerHTML = greeting({name: 'James', issData: issData})
   })
 }
+
+refresh();
 
 document.getElementById('refresh_button').addEventListener('click', refresh)
