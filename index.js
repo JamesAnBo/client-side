@@ -12,7 +12,7 @@ function refresh (){
 
     // In case you're curious
     console.log(data.body) // FYI: data.body is a string
-  var issData = JSON.parse(data.body)
+  const issData = JSON.parse(data.body)
     // Replace 'Space' below with the response
     var target = document.getElementsByTagName('main')[0]
     target.innerHTML = greeting({name: 'James', issData: issData})
