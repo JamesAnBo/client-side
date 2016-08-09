@@ -13,11 +13,11 @@ xhr.get(endpoint, function (err, data) {
 var issData = JSON.parse(data.body)
   // Replace 'Space' below with the response
   var target = document.getElementsByTagName('main')[0]
-  target.innerHTML = greeting({name: 'James', issData: issData.velocity})
+  target.innerHTML = greeting({name: 'James', issData: issData})
 })
 
 function refresh (){
-  return window.location.reload()
+  window.location.reload()
 }
 
 document.getElementById('refresh_button').addEventListener('click', refresh)
